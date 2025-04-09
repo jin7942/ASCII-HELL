@@ -4,7 +4,7 @@ body {
     font-family: monospace;
     font-size: 14px;
     margin: 0;
-    padding: 20px;
+    padding: 1rem;
 }
 
 .container {
@@ -28,6 +28,28 @@ body {
     margin-bottom: 8px;
 }
 
+.terminal {
+    line-height: 1.5;
+    /* white-space: pre-wrap; */
+}
+
+.output-line {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.blink-cursor::after {
+    content: '▊';
+    animation: blink 1s step-start infinite;
+    margin-left: 2px;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
 input,
 button {
     background: black;
@@ -43,12 +65,6 @@ button:hover {
     cursor: pointer;
 }
 
-.output {
-    margin-top: 16px;
-    white-space: pre-wrap;
-    border-top: 1px dashed #00ff00;
-    padding-top: 10px;
-}
 .file-label {
     display: inline-block;
     background: black;
@@ -60,7 +76,21 @@ button:hover {
     margin-right: 10px;
 }
 
+.file-label:hover {
+    background-color: #003300;
+}
+
 .file-name {
     color: #888;
     font-style: italic;
+}
+
+input[type='file'] {
+    display: none;
+}
+
+.output {
+    margin-top: 16px;
+    border-top: 1px dashed #00ff00;
+    padding-top: 10px;
 }

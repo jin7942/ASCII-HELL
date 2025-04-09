@@ -24,8 +24,16 @@
             <label for="fileInput" class="file-label">> Choose file</label>
             <input type="file" id="fileInput" style="display: none" />
             <span id="fileName" class="file-name">: no file selected</span>
-            <pre id="output" class="output"></pre>
-            <p>user@ascii-hell ~/ $</p>
+
+            <div class="terminal">
+                <p>user@ascii-hell ~/ $ ascii-convert ./ray.jpg</p>
+                <p>[OK] Image loaded...</p>
+                <p>[OK] Converting to ASCII...</p>
+                <p>[########..] 80% done</p>
+                <p>[OK] Convert complete</p>
+                <pre id="ascii-output"></pre>
+                <p class="blink-cursor">user@ascii-hell ~/ $</p>
+            </div>
         </div>
 
         <script src="./script.js"></script>
