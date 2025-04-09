@@ -1,0 +1,66 @@
+body {
+    background-color: black;
+    color: #00ff00;
+    font-family: monospace;
+    font-size: 14px;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    border: 2px double #00ff00;
+    padding: 16px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.title {
+    color: red;
+    font-weight: bold;
+    font-size: 13px;
+    white-space: pre;
+    margin-bottom: 12px;
+}
+
+.intro {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input,
+button {
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 4px 10px;
+    margin-top: 8px;
+    font-family: inherit;
+}
+
+button:hover {
+    background-color: #003300;
+    cursor: pointer;
+}
+
+.output {
+    margin-top: 16px;
+    white-space: pre-wrap;
+    border-top: 1px dashed #00ff00;
+    padding-top: 10px;
+}
+.file-label {
+    display: inline-block;
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-family: inherit;
+    margin-right: 10px;
+}
+
+.file-name {
+    color: #888;
+    font-style: italic;
+}
