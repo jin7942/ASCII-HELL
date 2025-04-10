@@ -4,6 +4,8 @@
         <meta charset="UTF-8" />
         <title>ASCII HELL</title>
         <link rel="stylesheet" href="./index.css" />
+        <script type="text/javascript" src="./aalib.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/figlet@1.8.0/lib/figlet.min.js"></script>
     </head>
     <body>
         <div class="container">
@@ -21,21 +23,47 @@
             <p class="intro">Welcome to the ASCII Hell</p>
             <p>[ Upload image to convert into terminal art ]</p>
 
-            <label for="fileInput" class="file-label">> Choose file</label>
-            <input type="file" id="fileInput" style="display: none" />
-            <span id="fileName" class="file-name">: no file selected</span>
+            <div id="selectBtn">
+                <label for="imageInput" class="file-label">> Image</label>
+                <input type="button" id="imageInput" accept="image/*" style="display: none" />
+
+                <label for="textInput" class="file-label">> Text</label>
+                <input type="button" id="textInput" accept=".txt" style="display: none" />
+            </div>
+
+            <!-- input section -->
+            <div>
+                <div id="file-section" style="margin-top: 10px; display: none">
+                    <label for="fileInput" class="file-label">> Convert Image</label>
+                    <input type="file" id="fileInput" style="display: none" />
+                </div>
+
+                <div id="input-section" class="input-section" style="display: none">
+                    <textarea id="asciiText" rows="5" placeholder="Enter ASCII content here..."></textarea>
+                </div>
+                <button id="convertBtn" style="display: none">> Convert</button>
+            </div>
+            <!-- input section -->
+
+            <p class="blink-cursor file-name" id="fileName">user@ascii-hell ~/ $</p>
 
             <div class="terminal">
-                <p>user@ascii-hell ~/ $ ascii-convert ./ray.jpg</p>
-                <p>[OK] Image loaded...</p>
-                <p>[OK] Converting to ASCII...</p>
-                <p>[########..] 80% done</p>
-                <p>[OK] Convert complete</p>
-                <pre id="ascii-output"></pre>
-                <p class="blink-cursor">user@ascii-hell ~/ $</p>
+                <p id="step2" class="step">[OK] Image loaded...</p>
+                <p id="step3" class="step">[OK] Converting to ASCII...</p>
+                <p id="step4" class="step">[########..] 80% done</p>
+                <p id="step5" class="step">[OK] Convert complete</p>
+
+                <canvas id="ascii-canvas" style="display: none"></canvas>
+                <pre id="ascii-output" class="ascii-output"></pre>
+                <div class="output-controls">
+                    <button id="copyBtn" style="display: none">> Copy</button>
+                    <button id="clearBtn" style="display: none">> Clear</button>
+                </div>
+
+                <p class="step blink-cursor" id="step6">user@ascii-hell ~/ $</p>
             </div>
         </div>
 
-        <script src="./script.js"></script>
+        <script type="text/javascript" src="./script.js"></script>
     </body>
 </html>

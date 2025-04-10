@@ -80,11 +80,6 @@ button:hover {
     background-color: #003300;
 }
 
-.file-name {
-    color: #888;
-    font-style: italic;
-}
-
 input[type='file'] {
     display: none;
 }
@@ -93,4 +88,33 @@ input[type='file'] {
     margin-top: 16px;
     border-top: 1px dashed #00ff00;
     padding-top: 10px;
+}
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    font-family: monospace;
+    padding: 8px;
+    margin-top: 8px;
+    font-size: 18px;
+}
+.output-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.output-controls button {
+    background: black;
+    color: #00ff00;
+    border: 1px solid #00ff00;
+    padding: 4px 10px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.output-controls button:hover {
+    background-color: #003300;
 }
