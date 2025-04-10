@@ -131,3 +131,20 @@ const hideBtn = () => {
     document.getElementById('clearBtn').style.display = 'none';
     document.getElementById('copyBtn').style.display = 'none';
 };
+
+window.addEventListener('DOMContentLoaded', () => {
+    console.log(`
+        
+                      ###                     ###                            ##     ##             
+                       ##                      ##                                                  
+ ##  ##    ####        ##    ####              ##      ##  ##               ###    ###     #####   
+ #######      ##    #####   ##  ##             #####   ##  ##                ##     ##     ##  ##  
+ ## # ##   #####   ##  ##   ######             ##  ##  ##  ##                ##     ##     ##  ##  
+ ##   ##  ##  ##   ##  ##   ##                 ##  ##   #####            ##  ##     ##     ##  ##  
+ ##   ##   #####    ######   #####            ######       ##            ##  ##    ####    ##  ##  
+                                                       #####              ####                     
+
+            MADE BY JIN - ascii-hell
+      GIT HUB : https://github.com/jin7942.co.kr
+  `);
+});
